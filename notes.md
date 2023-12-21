@@ -12,3 +12,5 @@ Let's take a minute to compare the techniques we've been using in this and the p
 ## Pivoting
 
 ![image](https://github.com/artempohribnyi/sql/assets/113499718/32975d04-1048-4632-9cec-bc350bec48b1)
+
+![image](https://github.com/artempohribnyi/sql/assets/113499718/5dd61044-fac7-481b-82cb-c8ec547b3839)
