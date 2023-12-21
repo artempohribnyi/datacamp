@@ -14,3 +14,14 @@ Let's take a minute to compare the techniques we've been using in this and the p
 ![image](https://github.com/artempohribnyi/sql/assets/113499718/32975d04-1048-4632-9cec-bc350bec48b1)
 
 ![image](https://github.com/artempohribnyi/sql/assets/113499718/5dd61044-fac7-481b-82cb-c8ec547b3839)
+
+![image](https://github.com/artempohribnyi/sql/assets/113499718/bf36b878-469b-45d3-b84d-b6b8f70df7be)
+
+![image](https://github.com/artempohribnyi/sql/assets/113499718/ed8100c4-e9c3-42c5-a4cb-98451d865c0c)
+
+![image](https://github.com/artempohribnyi/sql/assets/113499718/452815bb-508d-4720-90a8-0d9f7a4ea5b1)
+
+![image](https://github.com/artempohribnyi/sql/assets/113499718/ead431a3-7124-4109-b9e1-633ea06e41c7)
+
+
+
