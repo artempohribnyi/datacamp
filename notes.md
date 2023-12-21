@@ -8,3 +8,7 @@ Let's take a minute to compare the techniques we've been using in this and the p
 ![image](https://github.com/artempohribnyi/sql/assets/113499718/766b04ab-e6ce-4798-8e7e-412b343b356a)
 
 ![image](https://github.com/artempohribnyi/sql/assets/113499718/0d42ce16-e97b-4ebf-af2e-e06dac89d33c)
+
+## Pivoting
+
+![image](https://github.com/artempohribnyi/sql/assets/113499718/32975d04-1048-4632-9cec-bc350bec48b1)
