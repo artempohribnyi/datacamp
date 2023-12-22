@@ -23,5 +23,7 @@ Let's take a minute to compare the techniques we've been using in this and the p
 
 ![image](https://github.com/artempohribnyi/sql/assets/113499718/ead431a3-7124-4109-b9e1-633ea06e41c7)
 
+## Useful functions
+![image](https://github.com/artempohribnyi/sql/assets/113499718/092dc6f5-7835-47c6-b7dd-c54562b8fb9b)
 
 
