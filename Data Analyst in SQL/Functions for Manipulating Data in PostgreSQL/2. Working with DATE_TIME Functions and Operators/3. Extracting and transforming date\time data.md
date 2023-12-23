@@ -36,6 +36,11 @@ The DATE_TRUNC() function will truncate timestamp or interval data types to retu
 
 ![image](https://github.com/artempohribnyi/datacamp/assets/113499718/d0c7acb2-b34a-475f-ae08-651a0e34e8ce)
 
+# Putting it all together
+Many of the techniques you've learned in this course will be useful when building queries to extract data for model training. Now let's use some date/time functions to extract and manipulate some DVD rentals data from our fictional DVD rental store.
+
+In this exercise, you are going to extract a list of customers and their rental history over 90 days. You will be using the EXTRACT(), DATE_TRUNC(), and AGE() functions that you learned about during this chapter along with some general SQL skills from the prerequisites to extract a data set that could be used to determine what day of the week customers are most likely to rent a DVD and the likelihood that they will return the DVD late.
+
 ```
 SELECT 
   c.first_name || ' ' || c.last_name AS customer_name,
