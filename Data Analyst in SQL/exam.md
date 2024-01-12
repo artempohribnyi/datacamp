@@ -176,3 +176,27 @@ SELECT
 FROM clean
 GROUP BY "Place type";
 ```
+# Last
+```
+-- Write your query for task 2 in this cell
+
+CREATE TEMP TABLE clean_products AS 
+SELECT
+	product_id,
+	product_type,
+	CASE WHEN brand = '-' THEN 'Unknown' ELSE brand END AS brand,
+	ROUND(LEFT(weight, POSITION(' ' IN weight)-1)::NUMERIC, 2) AS weight,
+	ROUND(price::NUMERIC, 2)::money AS price,
+	average_units_sold::INTEGER,
+	COALESCE(year_added, '2022') AS year_added,
+	UPPER(COALESCE(stock_location, 'Unknown')) AS stock_location
+FROM
+	products;
+	
+SELECT 
+	*
+FROM clean_products
+
+
+
+```
