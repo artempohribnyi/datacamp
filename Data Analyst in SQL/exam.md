@@ -193,10 +193,9 @@ SELECT
 FROM
 	products;
 	
+
 SELECT 
 	*
 FROM clean_products
-
-
 
 ```
