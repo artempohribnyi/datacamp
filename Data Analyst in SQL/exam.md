@@ -35,6 +35,7 @@ FROM coffee;
 
 
 -- Cleansing
+-- "Place name" fix capitalisations issues
 -- "Rating" Missing values should be replaced with 0
 -- "Reviews" Missing values should be replaced with the overall median number, rounded to the nearest interger value.
 -- "Dine in option" alter 1 - True, NULL - False
