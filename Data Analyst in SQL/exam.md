@@ -136,3 +136,43 @@ SELECT
 	"Takeout option"::VARCHAR AS "Takeout option"
 FROM clean;
 ```
+```
+WITH data_clean AS
+(SELECT
+	"Region"::VARCHAR,
+	"Place name"::VARCHAR,
+	"Place type"::VARCHAR,
+	COALESCE("Rating", 0)::NUMERIC AS "Rating",
+	COALESCE("Reviews", (SELECT ROUND(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "Reviews")::NUMERIC) FROM coffee)) AS "Reviews",
+	"Price"::VARCHAR,
+	COALESCE("Delivery option", 'False') AS "Delivery option",
+	(CASE WHEN "Dine in option" IS NULL THEN 'False' ELSE "Dine in option" END) AS "Dine in option",
+	(CASE WHEN "Takeout option" IS NULL THEN 'False' ELSE "Takeout option" END) AS "Takeout option"
+FROM coffee)
+
+SELECT
+	*
+FROM data_clean
+```
+
+```
+CREATE TEMP TABLE clean AS
+SELECT
+	COALESCE("Region", 'Unknown') AS "Region",
+	COALESCE("Place name", 'Unknown') AS "Place name",
+	COALESCE("Place type", 'Unknown') AS "Place type",
+	COALESCE("Rating", 0) AS "Rating",
+	COALESCE("Reviews", (SELECT ROUND(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "Reviews")) FROM coffee)) AS "Reviews",
+	COALESCE("Price", 'Unknown') AS "Price",
+	COALESCE("Delivery option", 'False') AS "Delivery option",
+	CASE WHEN "Dine in option" IS NULL THEN 'False' ELSE 'True' END AS "Dine in option",
+	CASE WHEN "Takeout option" IS NULL THEN 'False' ELSE 'True' END AS "Takeout option"
+FROM coffee;
+
+SELECT
+	"Place type", 
+	MIN("Reviews") AS "min_review", 
+	MAX("Reviews") AS "max_review"
+FROM clean
+GROUP BY "Place type";
+```
