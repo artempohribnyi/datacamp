@@ -199,3 +199,19 @@ SELECT
 FROM clean_products
 
 ```
+
+```
+-- Write your query for task 2 in this cell
+
+SELECT
+	product_id,
+	product_type, -- No missing values and all are matched the criteria
+	REPLACE(brand, '-', 'Unknown') AS brand, -- There is a missing value '-'
+	REPLACE(weight, 'grams', '')::NUMERIC AS weight, -- There is a redandency in data 'grams'
+	price, -- Matched the criteria 
+	average_units_sold, -- Matched the criteria
+	COALESCE(year_added, 2022) AS year_added, -- The missing values replaced with 2022
+	UPPER(stock_location) AS stock_location -- Had some lowercase values
+FROM
+	products;
+```
