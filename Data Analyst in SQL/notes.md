@@ -232,3 +232,23 @@ SELECT ROUND(AVG(d.lat_n), 4) as median
       ORDER BY s.lat_n) AS d
  WHERE d.rowindex IN (FLOOR(@rowindex / 2), CEIL(@rowindex / 2));
 ```
+
+```
+SELECT hacker_id,
+       name
+  FROM (SELECT CASE WHEN c.difficulty_level = 1 AND s.score >= 20 THEN h.hacker_id
+                    WHEN c.difficulty_level = 2 AND s.score >= 30 THEN h.hacker_id
+                    WHEN c.difficulty_level = 3 AND s.score >= 40 THEN h.hacker_id
+                    WHEN c.difficulty_level = 4 AND s.score >= 60 THEN h.hacker_id
+                    WHEN c.difficulty_level = 5 AND s.score >= 80 THEN h.hacker_id
+                    WHEN c.difficulty_level = 6 AND s.score >= 100 THEN h.hacker_id
+                    WHEN c.difficulty_level = 7 AND s.score >= 120 THEN h.hacker_id END AS hacker_id,
+                    h.name,
+                    COUNT(c.challenge_id) AS num_of_challenges              
+               FROM hackers AS h
+         INNER JOIN challenges AS c ON h.hacker_id = c.hacker_id
+         INNER JOIN submissions AS s ON c.challenge_id = s.challenge_id
+           GROUP BY 1,2) AS count
+   WHERE num_of_challenges > 1
+ORDER BY num_of_challenges DESC, hacker_id;
+```
