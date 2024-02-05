@@ -252,3 +252,28 @@ SELECT hacker_id,
    WHERE num_of_challenges > 1
 ORDER BY num_of_challenges DESC, hacker_id;
 ```
+
+```
+/*
+Enter your query here.
+*/
+
+    SELECT contest_id, 
+           hacker_id, 
+           name, 
+           SUM(total_submissions), 
+           SUM(total_accepted_submissions), 
+           SUM(total_views), 
+           SUM(total_unique_views)
+      FROM contests AS c
+INNER JOIN colleges AS co USING(contest_id)
+INNER JOIN challenges AS ca USING(college_id)
+INNER JOIN view_stats AS v USING(challenge_id)
+INNER JOIN submission_stats AS s USING(challenge_id)
+  GROUP BY 1, 2, 3
+    HAVING SUM(total_submissions) > 0 AND 
+           SUM(total_accepted_submissions) > 0 AND 
+           SUM(total_views) > 0 AND
+           SUM(total_unique_views) > 0     
+  ORDER BY contest_id;
+```
