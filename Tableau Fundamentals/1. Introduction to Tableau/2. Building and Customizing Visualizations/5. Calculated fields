@@ -1,0 +1,35 @@
+# 1. Calculated fields
+
+Now that you've mastered the basics of filtering and sorting, let's move on to calculated fields!
+
+# 2. What are calculated fields?
+
+According to Tableau, Calculated fields allow you to create new data from data that already exists in your data source. So what does that mean? When would you want to create new data from existing data?
+
+
+1 https://help.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_create.htm
+3. Examples of calculated fields
+00:18 - 00:46
+Let's step back and look at some examples. Say you have a field with the sales amount your company makes each quarter. It's in US dollar, but you'd also like to have it in Euros. You can create a calculated field by multiplying the sales amount in USD by the current exchange rate - in this case zero point nine. Another example could be rounding gas prices up or creating a new field that indicates whether an email is a gmail account.
+
+4. Examples of calculated fields
+00:46 - 01:11
+You could also create a field with the year from a field holding the entire date. This is nice if you are trying to segment data by year. Calculated fields can use more than one field. For example, if you wanted to calculate the price earnings ratio, you can divide both data fields. Calculated fields are simple and very powerful. These are just some examples of what you can do with them.
+
+5. What are calculated fields?
+01:11 - 01:29
+Let's go back to the original definition and add a few more details. When you create a calculated field, you are creating a new column or data field - and it can be a measure or a dimension. This does not affect the underlying data, meaning you are not manipulating your data sources.
+
+1 https://help.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_create.htm
+6. Functions
+01:29 - 01:47
+To create a calculated field, you use functions. You may have noticed a few of them in the examples. They have a pair of parenthesis, where arguments are held within them. There are several different types of functions. At this stage, we will only focus on number functions.
+
+1 https://help.tableau.com/current/pro/desktop/en-us/functions.htm
+7. Dataset
+01:47 - 02:12
+In the next demos, we will be working with a new Gapminder indicator, mean years in school. This is the mean amount of years spent in school, from primary to graduate studies. This is a useful indicator of social and economic development. The indicator is split into gender and five age groups. So besides the column for country and year, there are ten columns of different demographics for this metric.
+
+8. Let's practice!
+02:12 - 02:17
+Let's get to it and create some calculated fields!
